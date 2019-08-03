@@ -24,7 +24,6 @@
 
 ![uduntu镜像的配置](https://github.com/xiaoliuing/study-notes/blob/master/imgs/uu-install.png?raw=true)
 
-####(3)[CentOS操作系统](<http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso>)
+#### (3)[CentOS操作系统](<http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso>)
 
 ![CentOS操作系统](https://github.com/xiaoliuing/study-notes/blob/master/imgs/cen-install.png?raw=true)
-
