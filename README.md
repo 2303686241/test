@@ -4,7 +4,7 @@
 
 ####1、linux基础
 
-[图片](<https://github.com/xiaoliuing/study-notes/imgs/test.jpeg>)
+[图片](<https://github.com/xiaoliuing/study-notes/blob/master/imgs/test.jpeg>)
 
 
 
