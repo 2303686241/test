@@ -22,4 +22,6 @@
 
 #### (2)[ubuntu操作系统](<https://ubuntu.com/download/desktop>)
 
-![uduntu镜像的配置]()
+![uduntu镜像的配置](https://github.com/xiaoliuing/study-notes/blob/master/imgs/uu-install.png?raw=true)
+
+(3)![CentOS操作系统](https://github.com/xiaoliuing/study-notes/blob/master/imgs/cen-install.png?raw=true)
