@@ -1,8 +1,9 @@
 ## 前端笔记文档
 
-### 课前准备阶段
+### 一、课前准备阶段
 
-#### 1、linux基础
+#### 1、Linux基础
 
-![图片](https://github.com/xiaoliuing/study-notes/blob/master/imgs/test.jpeg?raw=true)
+- [Linux操作系统的安装]()
+- [Linux命令入门]()
 
