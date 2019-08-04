@@ -19,7 +19,7 @@
 
 `JS是JavaScript的简称，是一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML网页上使用，用来给HTML网页增加动态功能。`
 
-![js脑图](https://github.com/xiaoliuing/study-notes/blob/master/imgs/1.png?raw=true)
+![js脑图](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/1.png?raw=true)
 
 > * 语言分类
 >   * java不属于以下两种语言
@@ -315,7 +315,7 @@ a();
 */
 ```
 
-![a](https://github.com/xiaoliuing/study-notes/blob/master/imgs/2.png?raw=true)![b](https://github.com/xiaoliuing/study-notes/blob/master/imgs/3.png?raw=true)
+![a](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/2.png?raw=true)![b](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/3.png?raw=true)
 
 ##  9、闭包
 
@@ -540,7 +540,7 @@ concole.log(a.length);   // ==> 3  (new String(123).length)  String内部自带�
 
 ###  （1）原型
 
-![1554523657222](https://github.com/xiaoliuing/study-notes/blob/master/imgs/4.png?raw=true)
+![1554523657222](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/4.png?raw=true)
 
 #### 1》constructor（构造器，找儿子，也可能找错（修改原型的constructor指向），原型中有改属性）
 
@@ -1113,13 +1113,13 @@ fun();   // ==> test
 * 遍历只有元素节点的节点树
   * parentElement    --->   返回当前父元素节点（IE不兼容）
   * children   -->   返回当前元素的元素子节点
-  * ![节点](https://github.com/xiaoliuing/study-notes/blob/master/imgs/5.png?raw=true)
+  * ![节点](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/5.png?raw=true)
 
 ###  dom操作
 
 >    增	
 >
-> ![dom操作](https://github.com/xiaoliuing/study-notes/blob/master/imgs/6.png?raw=true)
+> ![dom操作](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/6.png?raw=true)
 
 ##  21、js与css
 
