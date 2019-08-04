@@ -1,6 +1,6 @@
-# js笔记
+#  js笔记
 
-##1、主流浏览器及其内核
+## 1、主流浏览器及其内核
 
 * Google Chrome（谷歌）                     webkit/blink
 *  Firefox（火狐）                                   Gecko
@@ -15,11 +15,11 @@
 >   * js引擎
 >   * 其他模块
 
-##2、什么是js
+## 2、什么是js
 
 `JS是JavaScript的简称，是一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML网页上使用，用来给HTML网页增加动态功能。`
 
-![1554272003573](C:\Users\23036\AppData\Roaming\Typora\typora-user-images\1554272003573.png)
+![js脑图](https://github.com/xiaoliuing/study-notes/blob/master/imgs/1.png?raw=true)
 
 > * 语言分类
 >   * java不属于以下两种语言
@@ -33,7 +33,7 @@
 >     * 不足：稍微慢
 >     * javascript      php
 
-##3、js运算符
+## 3、js运算符
 
 ```javascript
 //undefined null NaN  ''  ""  0  false   ==>   boolean 值均为false
@@ -97,7 +97,7 @@ var a = 1 / 0;       // ==> Infinity 无穷
 var a = 0 / 1;       // ==> 0
 ```
 
-##4、typeof()    toString()   isNaN()  parseInt()
+## 4、typeof()    toString()   isNaN()  parseInt()
 
 * typeof()     查看数据类型（也可写成    typeof  数据 ），返回的结果为字符串
   * typeof(NaN)       		// ==> number
@@ -121,7 +121,7 @@ var a = 0 / 1;       // ==> 0
 * parseInt()     整型数字转换
   * parseInt(num, 2);           //将num定义为二进制数，在转换为整型的十进制数
 
-##5、解决函数e在浏览器的兼容性
+## 5、解决函数e在浏览器的兼容性
 
 ```javascript
 div.onclick = functionm(e) {
@@ -129,9 +129,9 @@ div.onclick = functionm(e) {
 }
 ```
 
-##6、函数
+## 6、函数
 
-###(1) argument
+### (1) argument
 
 ```javascript
 function fun(a, b){
@@ -145,7 +145,7 @@ fun(1,1);    // ==> 1  2
 fun(1);      //1   undefined
 ```
 
-###(2)  charAt()
+### (2)  charAt()
 
 ```javascript
 //charAt()   取字符串指定位置的数据  
@@ -153,7 +153,7 @@ var a = 'abc';
 a.charAt(1);     // ==> "b"
 ```
 
-#### (3)  计算n的阶层
+####  (3)  计算n的阶层
 
 ``` 
 function jc(n) {    //递归
@@ -165,13 +165,13 @@ function jc(n) {    //递归
 jc(5);
 ```
 
-##7、js执行三部曲
+## 7、js执行三部曲
 
-###(1)语法分析   (先通篇扫描，看看有没有语法错误，有错误就会终止程序执行，比如有中文的 '' ; '' )
+### (1)语法分析   (先通篇扫描，看看有没有语法错误，有错误就会终止程序执行，比如有中文的 '' ; '' )
 
-###(2)预编译  (发生在函数执行的前一刻)
+### (2)预编译  (发生在函数执行的前一刻)
 
-####1)  预编译前奏
+#### 1)  预编译前奏
 
 > window相当于一个域（库）
 
@@ -185,7 +185,7 @@ jc(5);
 >
 > 
 
-####2)预编译四部曲
+#### 2)预编译四部曲
 
 * 1、创建AO对象
 
@@ -264,9 +264,9 @@ jc(5);
 
   
 
-####（3）解释执行（读一行解释执行一行）
+#### （3）解释执行（读一行解释执行一行）
 
-##8、作用域、作用域链
+## 8、作用域、作用域链
 
 * [[scope]]：每个javascript函数都是一个对象，对象有些属性我们可以访问，但有些不可以，这些仅供javascript引擎存取，[[scope]]就是其中一个。[[scope]]指的是我们所说的作用域，其中存储了运行期上下的集合。
 * 作用域链：[[scope]]所存储的是执行期上下文的集合，这个集合呈链式链接。
@@ -315,11 +315,11 @@ a();
 */
 ```
 
-![1554365713127](C:\Users\23036\AppData\Roaming\Typora\typora-user-images\1554365713127.png)![1554365819426](C:\Users\23036\AppData\Roaming\Typora\typora-user-images\1554365819426.png)
+![a](https://github.com/xiaoliuing/study-notes/blob/master/imgs/2.png?raw=true)![b](https://github.com/xiaoliuing/study-notes/blob/master/imgs/3.png?raw=true)
 
-## 9、闭包
+##  9、闭包
 
-### （1）闭包概念：当内部函数被保存到外部时，将会生成闭包。
+###  （1）闭包概念：当内部函数被保存到外部时，将会生成闭包。
 
 ```javascript
 function a() {
@@ -341,7 +341,7 @@ demo();      // ==> 101   doing --> b.AO {}   a.AO {}   GO {}
 
 > ​	弊端： 闭包会导致原有作用域链不被释放，造成内存泄漏。
 
-### （2）闭包作用
+###  （2）闭包作用
 
 * **实现公有变量**
 
@@ -387,7 +387,7 @@ demo();      // ==> 101   doing --> b.AO {}   a.AO {}   GO {}
 
 * **模块化开发，防止污染全局变量**
 
-### （3）闭包拓展题
+###  （3）闭包拓展题
 
 > ```javascript
 > function test () {
@@ -429,9 +429,9 @@ demo();      // ==> 101   doing --> b.AO {}   a.AO {}   GO {}
 >
 > 
 
-#10、立即执行函数
+# 10、立即执行函数
 
-### 概念：此类函数没有函数声明，引用会出错（undefined）执行完立即销毁/释放，适合做初始化工作。
+###  概念：此类函数没有函数声明，引用会出错（undefined）执行完立即销毁/释放，适合做初始化工作。
 
 ```javascript
 概念：只有表达式（字符串、数字等）才能被执行符号('()')执行
@@ -451,9 +451,9 @@ var num = (function(a, b) {
 }(1,2))
 ```
 
-## 11、对象
+##  11、对象
 
-### （1）增删改查
+###  （1）增删改查
 
 ```javascript
 var obj = {
@@ -475,7 +475,7 @@ obj.name = '小张';
 console.log(obj.age);
 ```
 
-### (2)构造函数
+###  (2)构造函数
 
 ```javascript
 //系统自带的构造函数    Object();
@@ -519,7 +519,7 @@ a.fun = function() {
 }
 ```
 
-## 12、包装类
+##  12、包装类
 
 ```javascript
 var a = 123;
@@ -536,13 +536,13 @@ concole.log(a.length);   // ==> 3  (new String(123).length)  String内部自带�
 
 ```
 
-## 13、原型、原型链 、apply/call
+##  13、原型、原型链 、apply/call
 
-### （1）原型
+###  （1）原型
 
-![1554523657222](C:\Users\23036\AppData\Roaming\Typora\typora-user-images\1554523657222.png)
+![1554523657222](https://github.com/xiaoliuing/study-notes/blob/master/imgs/4.png?raw=true)
 
-####1》constructor（构造器，找儿子，也可能找错（修改原型的constructor指向），原型中有改属性）
+#### 1》constructor（构造器，找儿子，也可能找错（修改原型的constructor指向），原型中有改属性）
 
 ```javascript
 Person.prototype.name = '小刘';
@@ -563,7 +563,7 @@ console.log(Person.prototype);			//{
 										//}
 ```
 
-#### 2》________proto____（找爸爸，可以换爸爸（与new的位置有关），只有new时才会在函数顶部生成）
+####  2》________proto____（找爸爸，可以换爸爸（与new的位置有关），只有new时才会在函数顶部生成）
 
 ```javascript
 Person.prototype.name = '小刘';
@@ -596,7 +596,7 @@ Person.prototype = {   //Person.prototype  换了个对象空间，但 __proto__
 person.name = '小刘'; 
 ```
 
-### （2）原型链（找祖宗）
+###  （2）原型链（找祖宗）
 
 ```javascript
 //Grand.protoytpe.__proto__ = Object.prototype  //绝大多数原型的终端
@@ -712,11 +712,11 @@ console.log(son.num)	// ==> 101 访问的时 Son 函数里的 num 属性
 >
 > toFixed()  保留几位小数
 
-### （3）call/apply
+###  （3）call/apply
 
-#### a、作用：改变this指向，借用别的函数实现自己的功能
+####  a、作用：改变this指向，借用别的函数实现自己的功能
 
-#### b、区别：传参列表不同（形参/形参数组）
+####  b、区别：传参列表不同（形参/形参数组）
 
 ```javascript
 function Peron (name, age, gender) {
@@ -733,11 +733,11 @@ function obj(name, age, gender, hobbies) {
 var person = new Person('小刘', 19, 'female', 'ball');
 ```
 
-## 14、继承模式、命名空间、对象权举
+##  14、继承模式、命名空间、对象权举
 
-###（1）继承模式
+### （1）继承模式
 
-#### a、圣杯模式
+####  a、圣杯模式
 
 ```javascript
 function inhert (Target, Origin) {  //3,4两行不能互换位置
@@ -771,7 +771,7 @@ var son = new Son();
 var father = new Father();
 ```
 
-###（2）命名空间：管理变量，防止污染全局，适用于模块化开放
+### （2）命名空间：管理变量，防止污染全局，适用于模块化开放
 
 ```javascript
 var nmae = 'xiaozhang'
@@ -797,9 +797,9 @@ initLX();   // ==> xiaoliu
 initHK();   // ==> xioahan
 ```
 
-### （3）对象权举
+###  （3）对象权举
 
-#### for  in   /   hasOwnProperty   /   in   /   instanceof
+####  for  in   /   hasOwnProperty   /   in   /   instanceof
 
 ```javascript
 /*
@@ -836,15 +836,15 @@ console.log('lastname' in obj); //true
 //   instanceof
 ```
 
-## 15、this
+##  15、this
 
-### a、函数预编译过程中this  -->  window
+###  a、函数预编译过程中this  -->  window
 
-### b、全局作用域this --->   window
+###  b、全局作用域this --->   window
 
-### c、call/apply  可改变this 指向
+###  c、call/apply  可改变this 指向
 
-### d、obj.fun();      fun() 里的this指向obj（调用者）
+###  d、obj.fun();      fun() 里的this指向obj（调用者）
 
 ```javascript
 var namr = '111';
@@ -870,7 +870,7 @@ b.say = a.say;
 b.say();  // ==> 333
 ```
 
-## 16、arguments(只有两个属性  length  callee)
+##  16、arguments(只有两个属性  length  callee)
 
 ### arguments.callee （获取当前函数引用/函数体）
 
@@ -904,9 +904,9 @@ var a = (function (n) {
 > test();
 > ```
 
-## 17、克隆
+##  17、克隆
 
-### （1）浅克隆
+###  （1）浅克隆
 
 ```javascript
 var obj = {
@@ -928,7 +928,7 @@ function clone(Origin, Target) {
 clone(obj, obj1);   //arr  指向同一个数组对象
 ```
 
-### （2）深克隆
+###  （2）深克隆
 
 ```javascript
    var obj = {
@@ -963,11 +963,11 @@ clone(obj, obj1);   //arr  指向同一个数组对象
 	deepClone (obj, obj1);
 ```
 
-## 18、数组
+##  18、数组
 
-### （1）方法
+###  （1）方法
 
-#### a、改变原数组
+####  a、改变原数组
 
 ```javascript
 //push()   从尾部加
@@ -1011,7 +1011,7 @@ arr.sort(function(a, b) {
  });
 ```
 
-####b、不改变原数组
+#### b、不改变原数组
 
 ```javascript
 //concat   数组拼接
@@ -1031,7 +1031,7 @@ var arr = "1-2-3";
 console.log(arr.split('-'));  // ==> ["1","2","3"]
 ```
 
-### （2）类数组：属性要为索引（数字）属性，必需有length属性，最好加上push
+###  （2）类数组：属性要为索引（数字）属性，必需有length属性，最好加上push
 
 ```javascript
 var obj = {
@@ -1050,7 +1050,7 @@ console.log(obj);   /*obj = {
 					}*/ 
 ```
 
-## 19、es5.0的严格模式
+##  19、es5.0的严格模式
 
 `不在兼容es3.0的一些不规则语法`
 
@@ -1065,7 +1065,7 @@ console.log(obj);   /*obj = {
 >
 > 局部作用域预编译时this不在指向window，而是undefined，所以this必须被赋值
 
-### 不支持的es3.0的语法
+###  不支持的es3.0的语法
 
 ```javascript
 //with   可改变作用域链，比较损耗浏览器内核 （可用于命名空间）
@@ -1087,7 +1087,7 @@ fun();   // ==> test
 //arguments.callee   获取当前函数的引用
 ```
 
-## 20、DOM	
+##  20、DOM	
 
 > ``节点类型``	元素节点1、属性节点2、文本节点3、注释节点8、document9、DocumentFragment11
 >
@@ -1113,15 +1113,15 @@ fun();   // ==> test
 * 遍历只有元素节点的节点树
   * parentElement    --->   返回当前父元素节点（IE不兼容）
   * children   -->   返回当前元素的元素子节点
-  * ![1554787077843](C:\Users\23036\AppData\Roaming\Typora\typora-user-images\1554787077843.png)
+  * ![节点](https://github.com/xiaoliuing/study-notes/blob/master/imgs/5.png?raw=true)
 
-### dom操作
+###  dom操作
 
 >    增	
 >
-> ![1554796165490](C:\Users\23036\AppData\Roaming\Typora\typora-user-images\1554796165490.png)
+> ![dom操作](https://github.com/xiaoliuing/study-notes/blob/master/imgs/6.png?raw=true)
 
-## 21、js与css
+##  21、js与css
 
 > * doc.style.xx     只能获取行间样式，添加样式模式也为行间样式
 > * window.getComputedStyle(ele, null);   读取该元素的最终样式，只能读不能修改（IE8以下不兼容）
@@ -1131,5 +1131,3 @@ fun();   // ==> test
 > scroll(x, y)      scrollTo(x, y)      
 >
 > scrollBy(x, y);           能进行累加滚动
-
-## 22、正则表达式
