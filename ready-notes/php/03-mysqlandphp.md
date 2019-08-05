@@ -64,3 +64,5 @@ WHERE FirstName='Peter' AND LastName='Griffin'";
 .........
 ```
 
+##### 3、[小demo](<https://github.com/xiaoliuing/study-notes/tree/master/ready-notes/demo/php-mysql>)
+
