@@ -26,7 +26,7 @@ image.onload = function() {
 >
 > **>>  cors使用 [`Origin`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Origin) 和 [`Access-Control-Allow-Origin`](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) 来完成最简单的访问控制**
 >
-> ![cors原理图]()
+> ![cors原理图](https://github.com/xiaoliuing/study-notes/blob/master/imgs/cors.png?raw=true)
 
 ##### 2>、利用image打点
 
