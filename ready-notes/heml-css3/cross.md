@@ -14,7 +14,7 @@
 
 ##### 1、jsonp跨域
 
-**原理：**利用script标签不受跨域影响的这一特点，可在其src属性上做文章。设置src为请求的脚本路径并向其它域传递一个callback参数或者在开始定一个callback方法，通过其它域的后台将callback参数作为函数名和json串包装成js函数返回给浏览器，浏览器通过callback方法的参数就得到了后端返回的json数据了。
+**原理：** 利用script标签不受跨域影响的这一特点，可在其src属性上做文章。设置src为请求的脚本路径并向其它域传递一个callback参数或者在开始定一个callback方法，通过其它域的后台将callback参数作为函数名和json串包装成js函数返回给浏览器，浏览器通过callback方法的参数就得到了后端返回的json数据了。
 
 ```javascript
 <script src="localhost:8081/aa/index.php">
