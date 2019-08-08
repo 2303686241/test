@@ -2,7 +2,7 @@
 
 ### 1、image的使用
 
-#####  1>、利用image测网速
+#### 1>、利用image测网速
 
 ```javascript
 <script>
@@ -28,7 +28,7 @@ image.onload = function() {
 >
 > ![cors原理图](https://github.com/xiaoliuing/study-notes/blob/master/imgs/cors.png?raw=true)
 
-##### 2>、利用image打点
+#### 2>、利用image打点
 
 **image标签src的get请求**
 
