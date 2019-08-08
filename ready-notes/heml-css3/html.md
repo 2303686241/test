@@ -75,3 +75,60 @@ background-image: url("javascript:eval(alert('111'))'")
 * 有利于SEO，有利于搜索引擎爬虫更好的理解我们的网页，从而获取更多的有效信息，提升网页的权重。
 * 在没有CSS的时候能够清晰的看出网页的结构，增强可读性，便于团队开发和维护。
 * 支持多终端设备的浏览器渲染。
+
+#### 4、用iframe跨域实现localStorage的扩容
+
+**原理** `因为浏览器为了安全，禁止了不同域访问。因此只要调用与执行的双方是同域则可以相互访问。`
+
+* 在A.html 创建一个 iframe
+
+* iframe的页面放在 B.html 同域下，命名为execB.html
+
+* execB.html 里有调用B.html fIframe方法的js调用
+
+##### >>具体实现 <<
+
+> window.frames[0].postMessage(data, origin);
+>
+> * `data`表示要传递的数据
+> * `origin`字符串参数，指明目标窗口的源
+
+**1、http://xiaoliuhost.com.io/test.html**
+
+```javascript
+<iframe src="http://localhost/index.html"></iframe>
+<script>
+    
+  window.onload = function(){
+    // _data[0]为缓存的key，_data[1]为缓存的value
+	var _data = ["xiao", "xiaoliu"];
+    
+    window.frames[0].postMessage(_data, "http://localhost");
+  }	
+
+  // 监听对方传回来的数据（获得另一个域下缓存的数据）
+  window.addEventListener('message', function(e) {  
+	 console.log(e.data); // ==> "xiaoliu"      
+  }, false);
+
+</script>
+```
+
+**2、http://localhost/index.html**
+
+```javascript
+<script>
+window.addEventListener('message', function(e) {
+   if(e.source !== window.parent) {
+      return;
+    }
+    
+    localStorage.setItem(e.data[0], e.data[1); // 在该域下设置缓存
+    var response_data = localStorage.getItem(e.data[0]);
+    
+    // 响应对方，域名为对方的域名
+    window.parent.postMessage(response_data, 'http://xiaoliuhost.com.io');
+})
+</script>
+```
+
