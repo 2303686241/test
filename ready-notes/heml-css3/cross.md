@@ -99,9 +99,10 @@ server.listen(8080, () => {
     ```javascript
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://localhost:8080/index', true);
+    // xhr.withCredentials = true;  // 设置携带凭证cookie
     xhr.send();				
     xhr.onload =  function(){
-    　　console.log(xhr.responseText); // ==>  "success"
+    　　console.log(xhr.responseText); // ==>  'cors success'
     }
     ```
 
@@ -109,12 +110,24 @@ server.listen(8080, () => {
 
     ```javascript
     const http = require('http');
-    
     let server = http.createServer();
+    
+    const originList = {    // 允许跨域的origin白名单
+    	"http://xiaoliuhost.com.io": true,
+    	"http://www.asda.com": true,
+    	"http://ascsa.io": true
+    }
+    
     server.on('request', (req, res) => {
-    	res.setHeader("Access-Control-Allow-Origin", "http://xiaoliuhost.com.io"); 
+    	let { origin } = req.headers;  // 获取http请求头origin字段
+    	if(originList[origin]) {
+            // 当请求中携带cookie时, Access-Control-Allow-Origin必须要有确切的指定, 不能是通配符(*), 而withCredentials是跨域安全策略的一个控制属性
+    		res.setHeader("Access-Control-Allow-Origin", origin);
+            //res.setHeader("Access-Control-Allow-Credentials", "true");
+    		res.end('cors success');
+    	}
     	res.end('success');
-    });
+    })
     
     server.listen(8080);
     ```
@@ -123,12 +136,36 @@ server.listen(8080, () => {
 
 非简单请求就是在正式请求之前，增加一次HTTP请求，也称预检请求。
 
-浏览器先询问服务器，服务器判断当前域名是否在许可名单中，并响应浏览器使用哪些动词和头信息字段。只有得到服务器的许可之后，浏览器才会正式的放松HTTP请求，否则就报错。
+浏览器先询问服务器，服务器判断当前域名是否在许可名单中，并响应浏览器使用哪些动词和头信息字段。只有得到服务器的许可之后，浏览器才会正式的发送HTTP请求，否则就报错。
 
-* 预检阶段
-  * 请求用到的方法是`OPTIONS`，表示这个请求是用来询问的。
-  * 头信息包含几个特殊字段
-    * `origin`同简单请求一样 （必填）
-    * Access-Control-Request-Method：列出浏览器会用到哪些CORS请求的HTTP方法。（必填）
-    * `Access-Control-Request-Headers` : 该字段是一个逗号分隔的字符串，指定浏览器 `CORS` 请求会额外发送的头信息字段
+- 预检阶段
+  - 请求用到的方法是`OPTIONS`，表示这个请求是用来询问的。
+  - 满足条件
+    - 请求方法**不是**下列之一：
+      - `GET`
+      - `HEAD`
+      - `POST`
+    - 请求头中的Content-Type请求头的值**不是**下列之一：
+      - `application/x-www-form-urlencoded`
+      - `multipart/form-data`
+      - `text/plain`
+  - 请求头信息包含几个特殊字段
+    - `origin`同简单请求一样 （必填）
+    - `Access-Control-Request-Method：`列出浏览器会用到哪些CORS请求的HTTP方法。（必填）
+    - `Access-Control-Request-Headers` : 该字段是一个逗号分隔的字符串，指定浏览器 `CORS` 请求会额外发送的头信息字段
+  - 响应头包含的字段
+    - `Access-Control-Allow-Origin`
+    - `Access-Control-Allow-Methods:` 允许请求的类型
+    - `Access-Control-Allow-Headers: `指定HTTP能拿到的其他字段，以逗号分开
+    - `Access-Control-Max-Age：`指定本次预检请求的有效期，单位为秒。在有效期间，不用发出另一条预检请求
+    - `Access-Control-Allow-Credentials：`  是否允许发送 `Cookie`
+- 正式请求阶段（同简单请求）
+
+
+
+
+
+
+
+
 
