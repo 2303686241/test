@@ -1,4 +1,4 @@
-#  c js笔记
+# js笔记
 
 ## 1、主流浏览器及其内核
 
@@ -18,8 +18,6 @@
 ## 2、什么是js
 
 `JS是JavaScript的简称，是一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML网页上使用，用来给HTML网页增加动态功能。`
-
-![js脑图](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/1.png?raw=true)
 
 > * 语言分类
 >   * java不属于以下两种语言
@@ -319,7 +317,7 @@ a();
 
 ##  9、闭包
 
-###  （1）闭包概念：当内部函数被保存到外部时，将会生成闭包。
+###  （1）闭包概念：一个函数保存了另一个函数作用域的变量（拿了别人的东西）。
 
 ```javascript
 function a() {
@@ -540,7 +538,7 @@ concole.log(a.length);   // ==> 3  (new String(123).length)  String内部自带�
 
 ###  （1）原型
 
-![1554523657222](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/4.png?raw=true)
+**定义：**原型是function对象上的一个属性，它定义了构造函数的公共祖先，通过该构造函数产生的对象，继承了该原型的属性和方法。
 
 #### 1》constructor（构造器，找儿子，也可能找错（修改原型的constructor指向），原型中有改属性）
 
