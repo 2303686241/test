@@ -23,11 +23,11 @@
 
 ### HTTP/HTTPS
 
-> [HTTP总结](https://xiaoliua.com/blog/21)
+> [HTTP总结](https://www.xiaoliua.com/blog/21)
 >
 > [HTTPS总结](https://www.xiaoliua.com/blog/22)
 >
-> 了解HTTP/2、HTTP/3
+> 了解HTTP/2与HTTP/3
 > 
 > HTTP的反向代理
 
