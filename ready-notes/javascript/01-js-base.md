@@ -313,8 +313,6 @@ a();
 */
 ```
 
-![a](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/2.png?raw=true)![b](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/3.png?raw=true)
-
 ##  9、闭包
 
 ###  （1）闭包概念：一个函数保存了另一个函数作用域的变量（拿了别人的东西）。
@@ -1111,13 +1109,39 @@ fun();   // ==> test
 * 遍历只有元素节点的节点树
   * parentElement    --->   返回当前父元素节点（IE不兼容）
   * children   -->   返回当前元素的元素子节点
-  * ![节点](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/5.png?raw=true)
+  * childElementCount（children.length） -->  当前节点子节点个数
+  * firstElementChild  -->  返回第一个节点（IE不兼容）
+  * lastElementChild  -->  返回最后一个节点（IE不兼容）
+  * nextElementSibling/previousSibling  -->   返回后一个/前一个兄弟节点
 
 ###  dom操作
 
 >    增	
 >
-> ![dom操作](https://github.com/xiaoliuing/study-notes/blob/master/imgs/js/6.png?raw=true)
+> document.createElement();
+>
+> document.createTextNode();
+>
+> document.createComment();
+>
+> document.createDocumentFragment();
+>
+>    插
+>
+> PARENTNODE.appendChild();
+>
+> PARENTNODE.insertBdforae(a, b);
+>
+>    删
+>
+> parent.removeChild();
+>
+> child.remove();
+>
+>     替换
+>
+> parent.replaceChild(new, origin);
+
 
 ##  21、js与css
 
