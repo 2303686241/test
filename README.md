@@ -26,5 +26,9 @@
 > [HTTP总结](https://xiaoliua.com/blog/21)
 >
 > HTTPS总结
+>
+> 了解HTTP/2、HTTP/3
+> 
+> HTTP的反向代理
 
 ### Node
