@@ -29,6 +29,6 @@
 >
 > [了解HTTP/2与HTTP/3](https://www.xiaoliua.com/blog/25)
 > 
-> HTTP的反向代理
+> [Nginx反向代理](https://www.xiaoliua.com/blog/26)
 
 ### Node
