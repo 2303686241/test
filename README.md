@@ -44,3 +44,5 @@
 > [Node.js全局对象和常用工具](xiaoliua.com/blog/31)
 >
 > [Node.js文件系统](https://www.xiaoliua.com/blog/32)
+>
+> [重温express并实现重定向百度搜索](https://www.xiaoliua.com/blog/33)
