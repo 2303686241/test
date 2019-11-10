@@ -32,3 +32,15 @@
 > [Nginx反向代理](https://www.xiaoliua.com/blog/26)
 
 ### Node
+
+> [认识Node.js](https://www.xiaoliua.com/blog/27)
+>
+> [Node.js的回调机制与事件驱动机制](https://www.xiaoliua.com/blog/28)
+>
+> [Node.js的模块化](https://www.xiaoliua.com/blog/29)
+>
+> [Node.js路由](https://www.xiaoliua.com/blog/30)
+>
+> [Node.js全局对象和常用工具](xiaoliua.com/blog/31)
+>
+> [Node.js文件系统](https://www.xiaoliua.com/blog/32)
