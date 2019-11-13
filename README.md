@@ -46,3 +46,5 @@
 > [Node.js文件系统](https://www.xiaoliua.com/blog/32)
 >
 > [重温express并实现重定向百度搜索](https://www.xiaoliua.com/blog/33)
+>
+> [了解Robots协议、实现简单的爬虫](https://xiaoliua.com/blog/34)
