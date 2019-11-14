@@ -48,3 +48,5 @@
 > [重温express并实现重定向百度搜索](https://www.xiaoliua.com/blog/33)
 >
 > [了解Robots协议、实现简单的爬虫](https://xiaoliua.com/blog/34)
+>
+> [Node线上部署实现Nginx的负载均衡](https://www.xiaoliua.com/blog/36)
